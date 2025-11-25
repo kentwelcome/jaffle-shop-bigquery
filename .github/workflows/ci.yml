@@ -29,10 +29,10 @@ jobs:
           echo "$BQ_KEYFILE_CONTENT" > bq_keyfile.json
       - name: Run dbt
         run: |
-          uv dbt deps
-          uv dbt seed
-          uv dbt run
-          uv dbt docs generate
+          dbt deps
+          dbt seed
+          dbt run
+          dbt docs generate
       - name: Update Recce PR Session
         uses: DataRecce/recce-cloud-cicd-action@v1
         with:

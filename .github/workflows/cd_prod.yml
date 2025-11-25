@@ -30,10 +30,10 @@ jobs:
           echo "$BQ_KEYFILE_CONTENT" > bq_keyfile.json
       - name: Run dbt
         run: |
-          uv dbt deps
-          uv dbt seed
-          uv dbt run --target dev --target-path target-base
-          uv dbt docs generate --target dev --target-path target-base
+          dbt deps
+          dbt seed
+          dbt run --target dev --target-path target-base
+          dbt docs generate --target dev --target-path target-base
       - name: Update Recce Base Session
         uses: DataRecce/recce-cloud-cicd-action@v1
         with:

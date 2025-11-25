@@ -32,8 +32,8 @@ jobs:
         run: |
           dbt deps
           dbt seed
-          dbt run --target dev --target-path target-base
-          dbt docs generate --target dev --target-path target-base
+          dbt run
+          dbt docs generate
       - name: Update Recce Base Session
         uses: DataRecce/recce-cloud-cicd-action@v1
         with:

@@ -20,7 +20,7 @@ renamed as (
         tax_paid as tax_paid_cents,
         order_total as order_total_cents,
         {{ cents_to_dollars('subtotal') }} as subtotal,
-        {{ cents_to_dollars('tax_paid') }} as tax_paid,
+        {{ cents_to_dollars('tax_paid') }} * 10 as tax_paid,
         {{ cents_to_dollars('order_total') }} as order_total,
 
         ---------- timestamps

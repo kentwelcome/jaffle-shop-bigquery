@@ -12,7 +12,7 @@ jobs:
 
     env:
       BQ_PROJECT: ${{ secrets.BQ_PROJECT }}
-      BQ_DATASET: ${{ secrets.BQ_DATASET }}
+      BQ_DATASET: ${{ secrets.BQ_DATASET_BASE }}
       BQ_KEYFILE_PATH: ${{ github.workspace }}/bq_keyfile.json
       BQ_KEYFILE_CONTENT: ${{ secrets.BQ_KEYFILE_CONTENT }}
 
